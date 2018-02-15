@@ -7,3 +7,27 @@
 	<br>
 	achieve god-level results
 </h3>
+
+
+	<%= link_to "Not a member? Sign up here", new_user_registration_path %>
+
+	
+	<%= form_for(resource, :as => resource_name, :url => user_session_path(resource_name)) do |f| %>
+
+		<div class="form-group">
+		  <%= f.label :username %>
+		  <%= f.text_field :email, class: 'form-control', placeholder: "Email" %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label :password %>
+			<%= f.password_field :password, class: 'form-control'%>
+		</div>
+
+		  <%= f.check_box :remember_me %>
+		  <%= f.label :remember_me %>
+		  <%= f.submit 'Sign in' %>
+		  <%= link_to "Forgot your password?", new_password_path(:user) %>
+	<% end %>
+
+
