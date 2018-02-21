@@ -1,0 +1,2 @@
+module GoalsBookHelper
+end

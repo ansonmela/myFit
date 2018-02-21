@@ -11,11 +11,8 @@
   <body>
     <% if user_signed_in? %>
       <li class="nav-item">
-        <%= link_to 'A user is signed in!', '#', class: 'nav-link' %>
-      </li>
-    <% else %>
-      <li class="nav-item">
-        <%= link_to 'No user is signed in :(', '#', class: 'nav-link' %>
+        <%= link_to 'Welcome! Work hard and crush your goals!', '#', class: 'nav-link' %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
       </li>
     <% end %>
   	
