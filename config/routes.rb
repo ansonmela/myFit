@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   	devise_for :users
-		root :to => 'login_index_page#index'
+		root 'login_index_page#index'
 
 		resources :goals_book
 

@@ -1,5 +1,5 @@
 class GoalsBook < ApplicationRecord
 	belongs_to :user
-	has_many :goals 
+	validates_presence_of :book_name
 	
 end
